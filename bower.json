@@ -1,0 +1,16 @@
+{
+  "name": "breakpoint-slicer",
+  "version": "0.0.0",
+  "main": "stylesheets/_breakpoint-slicer.scss",
+  "homepage": "https://github.com/douglasduteil/breakpoint-slicer",
+  "authors": [
+    "Douglas Duteil <douglasduteil@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "breakpoint-sass": "^2"
+  },
+  "ignore": [
+    "**/.*"
+  ]
+}

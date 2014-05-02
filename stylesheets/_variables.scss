@@ -1,0 +1,12 @@
+// VARIABLES
+// -----------------------------------------------
+
+// The defaults
+$slicer-breakpoints: (
+  xsmall : 0, // Extra small
+  small  : 768px, // Small
+  medium : 992px, // Medium
+  large  : 1200px, // Large
+) !default;
+
+$slicer-anti-overlap-corrections: 1px !default;
