@@ -1,0 +1,120 @@
+//
+// IMPORT
+//
+
+@import
+  "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss",
+  "../../stylesheets/_breakpoint-slicer.scss";
+
+@import
+  "../../bower_components/jeet.gs/scss/jeet/index.scss";
+
+//
+// VARIABLES
+//
+
+$slicer-breakpoints: (
+  s  : 768px,  // Small
+  m  : 992px, // Medium
+  l  : 1200px,  // Large
+);
+
+
+$white: white;
+$primary-color: #48cfad;
+$secondary-color: #fc6e51;
+$thirdary-color: #db5138;
+
+//
+// GLOBAL
+//
+/*
+body{
+  font-family: Ubuntu, sans-serif;
+}
+
+.cl{
+  @extend %cf;
+}
+
+//
+// GRID
+// TWBS LIKE
+//
+
+.container {
+  @extend %cf;
+  @include column(4/6, $offset: 1/6);
+  max-width: 1200px;
+
+  @include from(l){
+    display: table;
+    margin: auto;
+    float: none;
+
+    &:last-child{
+      margin-right: auto;
+    }
+  }
+
+  @include at(m){
+    @include column(11/12, $offset: 1/24);
+  }
+}
+
+.col-sm-1{
+  @include at(m){
+    @include span(1/12);
+  }
+}
+
+.demo-column{
+  box-sizing: border-box;
+  border: 1px solid;
+  padding: 10px 0;
+}
+
+//
+// DEMO DESIGN
+//
+
+// JUMBOTRON
+.jumbotron {
+  @extend %cf;
+  color: #fff;
+  background: $primary-color;
+}
+
+// GRID
+.demo-grid {
+  @extend %cf;
+  color: #fff;
+  background: $secondary-color;
+  padding: 73px 0;
+
+  .demo-column{
+    background: $thirdary-color;
+    border-color: $white;  }
+}
+*/
+
+
+// HELLO
+.hello-world__at-slice{
+  &:after{
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  @each $slice in map-keys($slicer-breakpoints) {
+    // @debug($slice);
+  //@each $slice in $slicer-breakpoints {
+    @include at($slice){
+      &:after{
+        content: '#{$slice}';
+      }
+    }
+  }
+}
+

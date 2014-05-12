@@ -90,25 +90,16 @@
   $min: 0;
   $max: total-slices();
   $slice: index-of-breakpoint-name($slice-name);
+  //@debug('left slice #{$slice-name} n°#{$slice}');
 
   // Making sure that the slice provided is valid
   @if ($slice < $min) or ($slice > $max) {
     @warn "Wrong left slice name provided: #{$slice}. Should be between #{nth-breakpoint-name($min)} and #{nth-breakpoint-name($max)}.";
   } @else {
 
-    $left: i am declared;
-
-    // Special treatment of the first slice...
-    @if $slice == 1{
-      // ...to prevent a meaningless `min-width: 0` meida query
-      $left: max-width; // This is Breakpoint's syntax
-      $slice: $slice + 1;
-    } @else {
-
-      // Returning the left edge of the slice
-      $left: map_get($slicer-breakpoints, nth-breakpoint-name($slice));
-      $left: $left + anti-overlap-correction($left, true);
-    }
+    // Returning the left edge of the slice
+    $left: map_get($slicer-breakpoints, nth-breakpoint-name($slice));
+    $left: $left + anti-overlap-correction($left, false);
 
     @return $left
 
@@ -123,8 +114,9 @@
 @function right-bp-of-slice($slice-name){
 
   $min: 1;
-  $max: total-slices() - 1;
+  $max: total-slices();
   $slice: index-of-breakpoint-name($slice-name);
+  //@debug('right slice #{$slice-name} n°#{$slice}');
 
 
   // Making sure that the slice provided is valid
@@ -133,7 +125,8 @@
   } @else {
     // Reading the right edge of the slice
     $right-bp: map_get($slicer-breakpoints, nth-breakpoint-name($slice));
-    @return $right-bp + anti-overlap-correction($right-bp, false);
+    //@debug('right limit #{$right-bp}');
+    @return $right-bp - anti-overlap-correction($right-bp, true);
   }
 
 }

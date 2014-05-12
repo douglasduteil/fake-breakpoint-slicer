@@ -1,0 +1,341 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/* line 195, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
+.cl, .demo-grid {
+  *zoom: 1;
+}
+/* line 187, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
+.cl:before, .demo-grid:before, .cl:after, .demo-grid:after {
+  content: '';
+  display: table;
+}
+/* line 191, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
+.cl:after, .demo-grid:after {
+  clear: both;
+}
+
+/* line 35, style.scss */
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+@media (max-width: 991px) {
+  /* line 35, style.scss */
+  html {
+    font-size: 14px;
+  }
+}
+
+/* line 44, style.scss */
+body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu";
+  color: #444444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 55, style.scss */
+.cl {
+  clear: both;
+}
+
+@media (max-width: 767px) {
+  /* line 60, style.scss */
+  .container {
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 91.41667%;
+    margin-left: 4.29167%;
+    margin-right: 3%;
+  }
+  /* line 40, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
+  .container:last-child {
+    margin-right: 0%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 60, style.scss */
+  .container {
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 65.66667%;
+    margin-left: 17.16667%;
+    margin-right: 3%;
+    max-width: 1200px;
+  }
+  /* line 40, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
+  .container:last-child {
+    margin-right: 0%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 60, style.scss */
+  .container {
+    display: table;
+    margin: auto;
+    float: none;
+  }
+  /* line 72, style.scss */
+  .container:last-child {
+    margin-right: auto;
+  }
+}
+
+/* line 78, style.scss */
+.jumbotron {
+  padding: 90px 0;
+  background: #48cfad;
+  color: white;
+  z-index: 10;
+}
+/* line 85, style.scss */
+.jumbotron__h1 {
+  color: white;
+  font-size: 3.25rem;
+  font-family: "Helvetica W01 Bold", helvetica bold, helvetica, arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 98, style.scss */
+.square {
+  float: left;
+  display: inline;
+  clear: none;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+  border: 1px solid #5e5e5e;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 50px;
+}
+/* line 106, style.scss */
+.square:after {
+  display: block;
+  text-align: center;
+  height: 100%;
+  line-height: 3rem;
+  content: 'Hidden';
+  color: #ccc;
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 121, style.scss */
+  .at-row > .square:nth-child(2):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 121, style.scss */
+  .at-row > .square:nth-child(3):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 121, style.scss */
+  .at-row > .square:nth-child(4):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 121, style.scss */
+  .from-row > .square:nth-child(2):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+@media (min-width: 992px) {
+  /* line 121, style.scss */
+  .from-row > .square:nth-child(3):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 121, style.scss */
+  .from-row > .square:nth-child(4):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 121, style.scss */
+  .below-row > .square:nth-child(1):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+@media (max-width: 991px) {
+  /* line 121, style.scss */
+  .below-row > .square:nth-child(2):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+@media (max-width: 1199px) {
+  /* line 121, style.scss */
+  .below-row > .square:nth-child(3):after {
+    content: 'Visible';
+    color: #468847;
+    background-color: #dff0d8 !important;
+  }
+}
+
+/* line 165, style.scss */
+.demo-grid {
+  color: #fff;
+  background: #fc6e51;
+  padding: 73px 0;
+}
+/* line 171, style.scss */
+.demo-grid .demo-column {
+  background: #db5138;
+  border-color: white;
+}
+
+/* line 177, style.scss */
+.show-grid > .col-sm-1 {
+  padding: 10px 15px;
+  border: 1px solid #7d2617;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  /* line 183, style.scss */
+  .col-sm-1 {
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 8.33333%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 193, style.scss */
+  #between {
+    content: 'between(s, m)';
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 193, style.scss */
+  #between {
+    content: 'between(s, m)';
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* line 193, style.scss */
+  #between {
+    content: 'between(s, m)';
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  /* line 193, style.scss */
+  #between {
+    content: 'error between(m, s)';
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 213, style.scss */
+  #at {
+    content: 'at(s)';
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 213, style.scss */
+  #at {
+    content: 'at(s)';
+  }
+}
+@media (min-width: 1200px) {
+  /* line 213, style.scss */
+  #at {
+    content: 'at(l)';
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 228, style.scss */
+  #from {
+    content: 'from(s)';
+  }
+}
+@media (min-width: 992px) {
+  /* line 228, style.scss */
+  #from {
+    content: 'from(s)';
+  }
+}
+@media (min-width: 1200px) {
+  /* line 228, style.scss */
+  #from {
+    content: 'from(l)';
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 242, style.scss */
+  #below {
+    content: 'below(s)';
+  }
+}
+@media (max-width: 991px) {
+  /* line 242, style.scss */
+  #below {
+    content: 'below(m)';
+  }
+}
+@media (max-width: 1199px) {
+  /* line 242, style.scss */
+  #below {
+    content: 'below(l)';
+  }
+}

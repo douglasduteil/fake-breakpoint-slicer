@@ -1,0 +1,19 @@
+{
+  "name": "breakpoint-slicer",
+  "version": "0.0.0",
+  "description": "<img alt=\"an egg slicer\" src=\"http://i.imgur.com/GmQNEMG.jpg\" align=\"right\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/douglasduteil/breakpoint-slicer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/douglasduteil/breakpoint-slicer/issues"
+  },
+  "homepage": "https://github.com/douglasduteil/breakpoint-slicer"
+}

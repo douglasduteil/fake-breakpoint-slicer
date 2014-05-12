@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+
+  <title>Breakpoint slicer demo</title>
+
+
+  <!-- Bootstrap jeet-ed style -->
+  <link href="bower_components/normalize.css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="jumbotron cl">
+  <div class="container">
+    <h1 class="jumbotron__h1">Breakpoint slicer demo</h1>
+  </div>
+</div>
+
+<section class="slicer-map cl">
+  <div class="container">
+    <pre>
+$slicer-breakpoints: (
+  xs : 0,  // Extra small
+  s  : 768px,  // Small
+  m  : 992px, // Medium
+  l  : 1200px,  // Large
+);
+    </pre>
+  </div>
+</section>
+
+<section class="slices-demo cl">
+  AT
+    <div class="at-row cl">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+  FROM
+    <div class="from-row cl">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+  BELOW
+    <div class="below-row cl">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+</section>
+
+<div class="hello-world cl">
+  <div class="container">
+    <h1 class="hello-world__at-slice"></h1>
+  </div>
+</div>
+
+<section class="demo-grid cl">
+  <div class="container">
+    <h1 class="page-header">Grid</h1>
+
+    <div class="row show-grid">
+    <!-- (.demo-column.col-sm-1{col-sm-1})*12 -->
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+      <div class="demo-column col-sm-1">col-sm-1</div>
+    </div>
+
+
+  </div>
+</section>
+
+</body>
+</html>
