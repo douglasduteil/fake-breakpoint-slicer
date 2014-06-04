@@ -12,16 +12,16 @@
   cf()
 */
 /* line 195, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
-.cl, .demo-grid {
+.cl, .demo-grid, .row {
   *zoom: 1;
 }
 /* line 187, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
-.cl:before, .demo-grid:before, .cl:after, .demo-grid:after {
+.cl:before, .demo-grid:before, .row:before, .cl:after, .demo-grid:after, .row:after {
   content: '';
   display: table;
 }
 /* line 191, ../../home/x/xxx/WebProg/Github/douglasduteil/breakpoint-slicer/bower_components/jeet.gs/scss/jeet/_grid.scss */
-.cl:after, .demo-grid:after {
+.cl:after, .demo-grid:after, .row:after {
   clear: both;
 }
 
@@ -37,7 +37,7 @@ html {
   }
 }
 
-/* line 44, style.scss */
+/* line 45, style.scss */
 body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   margin: 0;
   padding: 0;
@@ -48,13 +48,13 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 55, style.scss */
+/* line 57, style.scss */
 .cl {
   clear: both;
 }
 
 @media (max-width: 767px) {
-  /* line 60, style.scss */
+  /* line 62, style.scss */
   .container {
     float: left;
     display: inline;
@@ -72,7 +72,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (min-width: 768px) {
-  /* line 60, style.scss */
+  /* line 62, style.scss */
   .container {
     float: left;
     display: inline;
@@ -91,26 +91,26 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (min-width: 1200px) {
-  /* line 60, style.scss */
+  /* line 62, style.scss */
   .container {
     display: table;
     margin: auto;
     float: none;
   }
-  /* line 72, style.scss */
+  /* line 74, style.scss */
   .container:last-child {
     margin-right: auto;
   }
 }
 
-/* line 78, style.scss */
+/* line 80, style.scss */
 .jumbotron {
   padding: 90px 0;
   background: #48cfad;
   color: white;
   z-index: 10;
 }
-/* line 85, style.scss */
+/* line 87, style.scss */
 .jumbotron__h1 {
   color: white;
   font-size: 3.25rem;
@@ -119,7 +119,12 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   text-align: center;
 }
 
-/* line 98, style.scss */
+/* line 96, style.scss */
+section {
+  margin: 20px 0;
+}
+
+/* line 104, style.scss */
 .square {
   float: left;
   display: inline;
@@ -136,7 +141,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   box-sizing: border-box;
   height: 50px;
 }
-/* line 106, style.scss */
+/* line 112, style.scss */
 .square:after {
   display: block;
   text-align: center;
@@ -148,7 +153,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .at-row > .square:nth-child(2):after {
     content: 'Visible';
     color: #468847;
@@ -156,7 +161,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .at-row > .square:nth-child(3):after {
     content: 'Visible';
     color: #468847;
@@ -164,7 +169,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (min-width: 1200px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .at-row > .square:nth-child(4):after {
     content: 'Visible';
     color: #468847;
@@ -173,7 +178,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
 }
 
 @media (min-width: 768px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .from-row > .square:nth-child(2):after {
     content: 'Visible';
     color: #468847;
@@ -181,7 +186,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (min-width: 992px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .from-row > .square:nth-child(3):after {
     content: 'Visible';
     color: #468847;
@@ -189,7 +194,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (min-width: 1200px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .from-row > .square:nth-child(4):after {
     content: 'Visible';
     color: #468847;
@@ -198,7 +203,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
 }
 
 @media (max-width: 767px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .below-row > .square:nth-child(1):after {
     content: 'Visible';
     color: #468847;
@@ -206,7 +211,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (max-width: 991px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .below-row > .square:nth-child(2):after {
     content: 'Visible';
     color: #468847;
@@ -214,7 +219,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 @media (max-width: 1199px) {
-  /* line 121, style.scss */
+  /* line 127, style.scss */
   .below-row > .square:nth-child(3):after {
     content: 'Visible';
     color: #468847;
@@ -222,20 +227,25 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   }
 }
 
-/* line 165, style.scss */
+/* line 174, style.scss */
+.page-header {
+  margin-bottom: 1em;
+}
+
+/* line 178, style.scss */
 .demo-grid {
   color: #fff;
   background: #fc6e51;
   padding: 73px 0;
 }
-/* line 171, style.scss */
+/* line 184, style.scss */
 .demo-grid .demo-column {
   background: #db5138;
   border-color: white;
 }
 
-/* line 177, style.scss */
-.show-grid > .col-sm-1 {
+/* line 191, style.scss */
+.show-grid > .demo-column {
   padding: 10px 15px;
   border: 1px solid #7d2617;
   -webkit-box-sizing: border-box;
@@ -243,8 +253,8 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
   box-sizing: border-box;
 }
 
-@media (min-width: 992px) {
-  /* line 183, style.scss */
+@media (min-width: 768px) {
+  /* line 204, style.scss */
   .col-sm-1 {
     float: left;
     display: inline;
@@ -256,86 +266,46 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span {
     margin-left: 0%;
     margin-right: 0%;
   }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 193, style.scss */
-  #between {
-    content: 'between(s, m)';
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 193, style.scss */
-  #between {
-    content: 'between(s, m)';
-  }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  /* line 193, style.scss */
-  #between {
-    content: 'between(s, m)';
-  }
-}
-@media (min-width: 767px) and (max-width: 992px) {
-  /* line 193, style.scss */
-  #between {
-    content: 'error between(m, s)';
+  /* line 208, style.scss */
+  .col-sm-6 {
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 213, style.scss */
-  #at {
-    content: 'at(s)';
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 213, style.scss */
-  #at {
-    content: 'at(s)';
-  }
-}
-@media (min-width: 1200px) {
-  /* line 213, style.scss */
-  #at {
-    content: 'at(l)';
-  }
-}
-
-@media (min-width: 768px) {
-  /* line 228, style.scss */
-  #from {
-    content: 'from(s)';
-  }
-}
 @media (min-width: 992px) {
-  /* line 228, style.scss */
-  #from {
-    content: 'from(s)';
-  }
-}
-@media (min-width: 1200px) {
-  /* line 228, style.scss */
-  #from {
-    content: 'from(l)';
+  /* line 216, style.scss */
+  .col-md-4 {
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
-@media (max-width: 767px) {
-  /* line 242, style.scss */
-  #below {
-    content: 'below(s)';
-  }
-}
-@media (max-width: 991px) {
-  /* line 242, style.scss */
-  #below {
-    content: 'below(m)';
-  }
-}
-@media (max-width: 1199px) {
-  /* line 242, style.scss */
-  #below {
-    content: 'below(l)';
+@media (min-width: 1200px) {
+  /* line 224, style.scss */
+  .col-lg-3 {
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 25%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }

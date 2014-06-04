@@ -41,6 +41,7 @@ html {
   }
 }
 
+// HARD RESET
 body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span{
   margin: 0;
   padding: 0;
@@ -50,6 +51,7 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span{
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
 // BASE
 
 .cl{
@@ -89,6 +91,10 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span{
     font-weight: bold;
     text-align: center;
   }
+}
+
+section{
+  margin: 20px 0;
 }
 
 //
@@ -161,6 +167,13 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span{
   }
 }
 
+//
+// Grid
+//
+
+.page-header{
+  margin-bottom: 1em;
+}
 
 .demo-grid {
   @extend %cf;
@@ -173,82 +186,43 @@ body, div, header, footer, h1, h2, h3, p, ul, ol, li, code, a, span{
     border-color: white;
   }
 }
+
 .show-grid{
-  > .col-sm-1{
+  > .demo-column{
     padding: 10px 15px;
     border: 1px solid darken($thirdary-color, 25);
     box-sizing: border-box;
   }
 }
-.col-sm-1{
-  @include from(m){
-    @include span(1/12);
-  }
+
+.row{
+  @extend %cf;
 }
 
-//
-// DEBUG
-//
-
-#between {
-  @include between(s, m){
-    content: 'between(s, m)';
-  }
-
-  @include between(m, l){
-    content: 'between(s, m)';
-  }
-
-  @include between(s, l){
-    content: 'between(s, m)';
-  }
-
-  // between test wrong mesure
-  @include between(m, s){
-    content: 'error between(m, s)';
-  }
-
-}
-
-#at {
-  @include at(s){
-    content: 'at(s)';
-  }
-
-  @include at(m){
-    content: 'at(s)';
-  }
-
-  @include at(l){
-    content: 'at(l)';
-  }
-}
-
-
-#from {
+.col-sm {
   @include from(s){
-    content: 'from(s)';
-  }
+    &-1{
+      @include span(1/12);
+    }
 
-  @include from(m){
-    content: 'from(s)';
-  }
-
-  @include from(l){
-    content: 'from(l)';
+    &-6 {
+      @include span(1/2)
+    }
   }
 }
 
-#below {
-  @include below(s){
-    content: 'below(s)';
+.col-md {
+  @include from(m){
+    &-4{
+      @include span(4/12);
+    }
   }
+}
 
-  @include below(m){
-    content: 'below(m)';
-  }
-
-  @include below(l){
-    content: 'below(l)';
+.col-lg {
+  @include from(l){
+    &-3{
+      @include span(3/12);
+    }
   }
 }
