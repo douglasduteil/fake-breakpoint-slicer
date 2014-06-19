@@ -1,6 +1,6 @@
 <img alt="an egg slicer" src="http://i.imgur.com/GmQNEMG.jpg" align="right">
 
-Breakpoint Slicer
+FAKE Breakpoint Slicer
 =================
 
 **Fork of [Breakpoint Slicer][4] with a humanized approach.**
