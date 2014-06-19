@@ -1,5 +1,5 @@
 {
-  "name": "breakpoint-slicer",
+  "name": "fake-breakpoint-slicer",
   "version": "0.0.0",
   "main": "stylesheets/_breakpoint-slicer.scss",
   "homepage": "https://github.com/douglasduteil/breakpoint-slicer",
