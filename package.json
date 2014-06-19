@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/douglasduteil/breakpoint-slicer.git"
+    "url": "git://github.com/douglasduteil/fake-breakpoint-slicer.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/douglasduteil/breakpoint-slicer/issues"
+    "url": "https://github.com/douglasduteil/fake-breakpoint-slicer/issues"
   },
-  "homepage": "https://github.com/douglasduteil/breakpoint-slicer"
+  "homepage": "https://github.com/douglasduteil/fake-breakpoint-slicer"
 }
